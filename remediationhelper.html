@@ -1,0 +1,51 @@
+<!--
+
+	Prepworks Remediation Helper
+	by Michael Selchow
+
+	Provides an interface to write step-by-step
+	remediation, then formats the text for accordion-
+	style remediation in Prepworks.
+
+	v1.0
+
+	For questions: mselchow@prepworks.com
+
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prepworks Remediation Helper</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="remediate.js"></script>
+	</head>
+	<body>
+		<p>
+			<h1>Prepworks Remediation Helper</h1>
+		</p>
+		<p>
+			<form name="input" class="left">
+				Step 1<br/>
+				<textarea id="step1" rows="8" cols="80"></textarea><br/><br/>
+				Step 2<br/>
+				<textarea id="step2" rows="8" cols="80"></textarea><br/><br/>
+				Step 3<br/>
+				<textarea id="step3" rows="8" cols="80"></textarea><br/><br/>
+				Step 4<br/>
+				<textarea id="step4" rows="8" cols="80"></textarea><br/><br/>
+				Step 5<br/>
+				<textarea id="step5" rows="8" cols="80"></textarea>
+			</form>
+
+			<div class="right">
+				<a href="javascript:void(0)" onClick="remediate();"><button>Generate Code</button></a>
+				<a href="javascript:void(0)" onClick="clearAll();"><button>Clear</button></a><br/>
+				Correct answer:<br/>
+				<textarea id="correct" rows="15" cols="80"></textarea><br/>
+				Incorrect answer:<br/>
+				<textarea id="incorrect" rows="15" cols="80"></textarea><br/>
+			</div>
+		</p>
+	</body>
+</html>

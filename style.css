@@ -1,0 +1,24 @@
+body {
+	text-align: center;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.left {
+	float: left;
+	width: 50%;
+}
+
+.right {
+	float: right;
+	width: 50%;
+}
+
+button {
+	margin: 0 5px 20px 5px;
+	padding: 10px 20px;
+	font-size: 1.5em;
+}
+
+pre {
+	font-family: "Times New Roman", Times, serif;
+}
