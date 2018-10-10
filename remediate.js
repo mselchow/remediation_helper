@@ -85,7 +85,7 @@ function clearAll() {
 
 function htmlEscape(str) {
 	return String(str)
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
+		//.replace(/</g, '&lt;')
+		//.replace(/>/g, '&gt;')
 		.replace(/-/g, '&minus;');
 }
