@@ -24,6 +24,24 @@
 		<p>
 			<h1>Prepworks Remediation Helper</h1>
 		</p>
+
+		<div class="directions">
+			<table>
+				<tr>
+					<td class="term">Generate Code:</td>
+					<td>creates remediation code from steps input</td>
+				</tr>
+				<tr>
+					<td class="term">Clear:</td>
+					<td>clears all steps and remediation text</td>
+				</tr>
+				<tr>
+					<td class="term">Unremediate:</td>
+					<td>deconstructs remediation into its original steps</td>
+				</tr>
+			</table>
+		</div>
+
 		<p>
 			<form name="input" class="left">
 				Step 1<br/>
@@ -40,7 +58,9 @@
 
 			<div class="right">
 				<a href="javascript:void(0)" onClick="remediate();"><button>Generate Code</button></a>
-				<a href="javascript:void(0)" onClick="clearAll();"><button>Clear</button></a><br/>
+				<a href="javascript:void(0)" onClick="clearAll();"><button>Clear</button></a>
+				<a href="javascript:void(0)" onClick="unremediate();"><button>Unremediate</button></a>
+				<br/>
 				Correct answer:<br/>
 				<textarea id="correct" rows="15" cols="80"></textarea><br/>
 				Incorrect answer:<br/>

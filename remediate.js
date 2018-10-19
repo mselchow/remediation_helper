@@ -1,6 +1,5 @@
 /*
-	This function is called on button click and pulls together the remediation
-	input and outputs formatted code for accordion remediation.
+	This function is called on button click and pulls together the remediation	input and outputs formatted code for accordion remediation.
 
 	Remediate() will only pull in remediation for the text boxes that
 	have text in them.
@@ -58,6 +57,31 @@ function remediate() {
 	document.getElementById("incorrect").value = headerIncorrect + remediation + footer;
 }
 
+
+/*
+	This function does the opposite of the remediate function. Given a set of
+	remediation inputs, it will deconstruct it into its original steps.
+*/
+
+function unremediate() {
+	// Gets the remediation from whichever field is not empty
+	var remediation = (document.getElementById("correct").value == "") ? document.getElementById("incorrect").value : document.getElementById("correct").value;
+
+	// Loop through for all 5 step textboxes
+	for (var i = 1; i <= 5; i++) {
+		// Generate a dynamic regex with i
+		var pattern = new RegExp("Step " + i + "<\\/a><\\/h3>\\n?<div>\\n?([^]*?)<\\/div>", "gm");
+
+		// Run the expression for a match
+		var matches = pattern.exec(remediation);
+
+		// If match found, update the right element using a dynamic id
+		var id = "step" + i;
+		if (matches != null) {
+			document.getElementById(id).value = matches[1];
+		}
+	}
+}
 
 
 /*
